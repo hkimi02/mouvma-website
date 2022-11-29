@@ -23,6 +23,6 @@ export default {
   }
   .title{
     font-size: 4rem;
-    color: #540375;
+    color: #ffbb55;
   }
 </style>

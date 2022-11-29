@@ -103,7 +103,6 @@ export default {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
 .router-link {
   text-decoration: none;
 }

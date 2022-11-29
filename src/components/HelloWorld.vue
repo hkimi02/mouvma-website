@@ -3,6 +3,10 @@
     <img src="../assets/images/banner.jpg" alt="">
   </div>
   <div class="row">
+      <h1 class="title text-center">Activities</h1>
+  </div>
+  <hr>
+  <div class="row office">
     <div class="col">
       <div class="row">
         <div class="col">
@@ -26,12 +30,13 @@
       </div>
     </div>
   </div>
+  <hr>
   <div class="row">
     <h1 class="text-center" style="color: #FFBF00;">Ofiice Members</h1>
   </div>
-  <div class="row">
+  <div class="row office">
     <div class="card member-card other-member">
-      <img src="../assets/images/banner.jpg" class="card-img-top">
+      <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -53,7 +58,7 @@
     </div>
  
     <div class="card member-card other-member">
-      <img src="../assets/images/banner.jpg" class="card-img-top">
+      <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -74,7 +79,7 @@
       </div>
     </div>
     <div class="card member-card other-member">
-      <img src="../assets/images/banner.jpg" class="card-img-top">
+      <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -95,7 +100,7 @@
       </div>
     </div>
     <div class="card member-card other-member">
-      <img src="../assets/images/banner.jpg" class="card-img-top">
+      <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -116,7 +121,7 @@
       </div>
     </div>
     <div class="card member-card other-member">
-      <img src="../assets/images/banner.jpg" class="card-img-top">
+      <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -137,7 +142,7 @@
       </div>
     </div>
     <div class="card member-card other-member">
-      <img src="../assets/images/banner.jpg" class="card-img-top">
+      <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -177,6 +182,11 @@ export default {
 .member-card {
   width: 18rem;
   background-color: #FFBF00;
+  transition: all 300ms ease;
+  box-shadow: 0 2rem 3rem #dce1eb;
+}
+.member-card:hover{
+  transform: scale(1.2);
 }
 .other-member{
   margin-top:5%;
@@ -185,4 +195,16 @@ export default {
 .other-member:last-child{
   margin-left:10%
 }
+.member-pic{
+  margin-top:5%;
+}
+.title{
+    color: #ffbb55;
+    margin-top: 5%;
+  }
+  @media screen and (max-width:768px) {
+    .office{
+      margin-left: 5%;
+    }
+  }
 </style>

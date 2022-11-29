@@ -28,6 +28,13 @@
                   </span></router-link>
               </div>
             </li>
+            <li class="nav-item">
+              <div class="nav-link">
+                <router-link class="router-link" to="/"><span class="material-symbols-outlined">
+                   store
+                  </span></router-link>
+              </div>
+            </li>
           </ul>
           <button class="btn login_btn" style="background-color: #10A19D;">login</button>
         </div>

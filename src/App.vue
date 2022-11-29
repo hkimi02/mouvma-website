@@ -1,30 +1,117 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand brand-text" style="color: #10A19D;" href="#">MOUVMA </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <div class="nav-link">
+                <router-link class="router-link" to="/"><span class="material-symbols-outlined">home</span>
+                </router-link>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link">
+                <router-link class="router-link" to="/about"><span class="material-symbols-outlined">person</span>
+                </router-link>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link">
+                <router-link class="router-link" to="/"><span class="material-symbols-outlined">
+                    event
+                  </span></router-link>
+              </div>
+            </li>
+          </ul>
+          <button class="btn login_btn" style="background-color: #10A19D;">login</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div>
+    <router-view />
+  </div>
+  <footer_part></footer_part>
 </template>
-
+<script>
+import footer_part from '@/components/footer_part.vue'
+export default {
+  name: 'App',
+  components: {
+    footer_part
+  }
+}
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-light-blue: #10A19D;
+  --color-purple: #540375;
+  --color-orange: #FF7000;
+  --color-yellow: #FFBF00;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-2: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-nav {
-  padding: 30px;
+.dark-theme-variables {
+  --color-backgound: #181a12;
+  --color-white: #202528;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+* {
+  margin: 0%;
+  padding: 0%;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.router-link {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: var(--color-yellow);
+  box-shadow: var(--box-shadow);
+}
+
+span {
+  font-size: 1rem;
+  color: var(--color-light-blue);
+}
+
+button {
+  box-shadow: var(--box-shadow);
 }
 </style>

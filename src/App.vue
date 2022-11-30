@@ -17,21 +17,21 @@
             </li>
             <li class="nav-item">
               <div class="nav-link">
-                <router-link class="router-link" to="/about"><span class="material-symbols-outlined">person</span>
+                <router-link class="router-link" to="/Profile"><span class="material-symbols-outlined">person</span>
                 </router-link>
               </div>
             </li>
             <li class="nav-item">
               <div class="nav-link">
-                <router-link class="router-link" to="/"><span class="material-symbols-outlined">
+                <router-link class="router-link" to="/Events"><span class="material-symbols-outlined">
                     event
                   </span></router-link>
               </div>
             </li>
             <li class="nav-item">
               <div class="nav-link">
-                <router-link class="router-link" to="/"><span class="material-symbols-outlined">
-                   store
+                <router-link class="router-link" to="/Store"><span class="material-symbols-outlined">
+                    store
                   </span></router-link>
               </div>
             </li>

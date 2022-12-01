@@ -7,13 +7,12 @@
         <div class="contextBx">
             <h3>{{product.name}}</h3>
             <h2 class="price">{{'$'+product.price}}</h2>
-            <a href="#" class="buy">Buy now</a>
+            <button class="buy" @click="addproduct()">Buy now</button>
         </div>
     </div>
 </div>
 </template>
 <script>
-
 export default{
     name:'mecrhArticle',
     data(){
@@ -26,8 +25,8 @@ export default{
         ]
     ,
     methods:{
-        test(){
-            console.log(product.imgPath);
+        addproduct(){
+            this.$emit("add-to-cart");
         }
     }
 }

@@ -40,7 +40,7 @@
       <button :class="[filter=='all' ? 'selected' : '']" class="btn col" @click="showArticle('all')">ALL</button>
       <button :class="[filter=='hoodie' ? 'selected' : '']" class="btn col" @click="showArticle('hoodie')">hoodie</button>
       <button :class="[filter=='t-shirt' ? 'selected' : '']" class="btn col" @click="showArticle('t-shirt')">t-shirt</button>
-      <button class="btn col" @click="showArticle('accesoires')">accesoires</button>
+      <button :class="[filter=='accesoires' ? 'selected' : '']" class="btn col" @click="showArticle('accesoires')">accesoires</button>
     </div>
     <br>
     <div v-for="product in filtred_products" class="col product">
@@ -85,22 +85,94 @@ export default {
         },
         {
           id: 3,
-          name: 'black hoodie',
+          name: 'red hoodie',
           price: 38,
           quantity: 10,
-          img: require("../assets/images/yellow_hoodie.jpeg"),
+          img: require("../assets/images/red_hoodie.jpeg"),
           buy: 0,
           type:'hoodie',
         },
         {
           id: 4,
-          name: 'red hoodie',
+          name: 'white hoodie',
           price: 38,
           quantity: 10,
-          img: require("../assets/images/yellow_hoodie.jpeg"),
+          img: require("../assets/images/white_hoodie.jpg"),
+          buy: 0,
+          type:'hoodie',
+        },
+        {
+          id: 5,
+          name: 'white t-shirt',
+          price: 38,
+          quantity: 10,
+          img: require("../assets/images/white_tshirt.png"),
           buy: 0,
           type:'t-shirt',
-        }
+        },
+        {
+          id: 6,
+          name: 'red t-shirt',
+          price: 38,
+          quantity: 10,
+          img: require("../assets/images/red_tshirt.jpg"),
+          buy: 0,
+          type:'t-shirt',
+        },
+        {
+          id: 7,
+          name: 'black t-shirt',
+          price: 38,
+          quantity: 10,
+          img: require("../assets/images/black_tshirt.png"),
+          buy: 0,
+          type:'t-shirt',
+        },
+        {
+          id: 8,
+          name: 'white t-shirt',
+          price: 38,
+          quantity: 10,
+          img: require("../assets/images/white_tshirt.png"),
+          buy: 0,
+          type:'t-shirt',
+        },
+        {
+          id: 9,
+          name: 'red bracelet',
+          price: 38,
+          quantity: 10,
+          img: require("../assets/images/red_bracelet.jpg"),
+          buy: 0,
+          type:'accesoires',
+        },
+        {
+          id: 10,
+          name: 'yellow bracelet',
+          price: 38,
+          quantity: 10,
+          img: require("../assets/images/yellow_bracelet.jpg"),
+          buy: 0,
+          type:'accesoires',
+        },
+        {
+          id: 11,
+          name: 'mouvma white sticker',
+          price: 38,
+          quantity: 10,
+          img: require("../assets/images/mouvma_sticker.png"),
+          buy: 0,
+          type:'accesoires',
+        },
+        {
+          id: 12,
+          name: 'mouvma black sticker',
+          price: 38,
+          quantity: 10,
+          img: require("../assets/images/black_sticker.png"),
+          buy: 0,
+          type:'accesoires',
+        },
       ],
       purshases: [],
       filtred_products:[],
@@ -163,12 +235,12 @@ export default {
     for(i=0;i<this.products.length;i++){
       if(this.products[i].type==type){
         this.filtred_products.push(this.products[i]);
-        this.filter=type;
       }
     }
     if(type=='all'){
       this.filtred_products=this.products;
     }
+    this.filter=type;
   }
   },
 }
@@ -202,6 +274,7 @@ export default {
   background-color: #fff;
   box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
   border: 0;
+  margin-left: 2%;
 }
 
 .product-image {
@@ -217,6 +290,7 @@ export default {
 }
 .filter-btn{
   margin-bottom: 2%;
+  margin-left: 1%;
 }
 .selected{
   background-color: #FFBF00;

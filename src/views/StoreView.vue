@@ -1,6 +1,5 @@
 <template>
-  <div class="row store">
-
+  <div class="row store container-fluid">
     <div class="row">
       <div class="col">
         <img src="../assets/images/store.svg" alt="">
@@ -37,7 +36,14 @@
       </div>
     </div>
     <h1 class="title_products text-center">products</h1>
-    <div v-for="product in products" class="col product">
+    <div class="row filter-btn">
+      <button :class="[filter=='all' ? 'selected' : '']" class="btn col" @click="showArticle('all')">ALL</button>
+      <button :class="[filter=='hoodie' ? 'selected' : '']" class="btn col" @click="showArticle('hoodie')">hoodie</button>
+      <button :class="[filter=='t-shirt' ? 'selected' : '']" class="btn col" @click="showArticle('t-shirt')">t-shirt</button>
+      <button class="btn col" @click="showArticle('accesoires')">accesoires</button>
+    </div>
+    <br>
+    <div v-for="product in filtred_products" class="col product">
       <mecrhArticle @add-to-cart="addToCart(product)" :product="product"></mecrhArticle>
     </div>
   </div>
@@ -54,6 +60,7 @@ export default {
   },
   created() {
     this.purshases = JSON.parse(localStorage.getItem("purshases"));
+    this.filtred_products=this.products;
   },
   data() {
     return {
@@ -65,6 +72,7 @@ export default {
           quantity: 10,
           img: require("../assets/images/blackhoodie.jpg"),
           buy: 0,
+          type:'hoodie',
         },
         {
           id: 2,
@@ -73,6 +81,7 @@ export default {
           quantity: 10,
           img: require("../assets/images/yellow_hoodie.jpeg"),
           buy: 0,
+          type:'hoodie',
         },
         {
           id: 3,
@@ -81,32 +90,38 @@ export default {
           quantity: 10,
           img: require("../assets/images/yellow_hoodie.jpeg"),
           buy: 0,
+          type:'hoodie',
         },
         {
           id: 4,
-          name: 'black hoodie',
+          name: 'red hoodie',
           price: 38,
           quantity: 10,
           img: require("../assets/images/yellow_hoodie.jpeg"),
           buy: 0,
+          type:'t-shirt',
         }
       ],
       purshases: [],
+      filtred_products:[],
+      filter:'all',
     }
   },
   methods: {
     addToCart(product) {
+      let item={...product};
       let i = 0;
       for (i = 0; i < this.purshases.length; i++) {
-        if (this.purshases[i].id == product.id) {
+        if (this.purshases[i].id == item.id) {
           this.purshases[i].buy++;
           return;
         }
       }
       for (i = 0; i < this.products.length; i++) {
-        if (this.products[i].id == product.id && this.products[i].id > 0) {
-          this.purshases.push(product);
+        if (this.products[i].id == item.id && this.products[i].id > 0) {
+          this.purshases.push(item);
           this.purshases[this.purshases.length - 1].buy++;
+          this.purshases[this.purshases.length - 1].quantity=0;
           localStorage.setItem('purshases', JSON.stringify(this.purshases));
           this.products[i].quantity--;
           return;
@@ -142,13 +157,25 @@ export default {
       }
     }
   },
+  showArticle(type){
+    this.filtred_products=[];
+    let i=0;
+    for(i=0;i<this.products.length;i++){
+      if(this.products[i].type==type){
+        this.filtred_products.push(this.products[i]);
+        this.filter=type;
+      }
+    }
+    if(type=='all'){
+      this.filtred_products=this.products;
+    }
+  }
   },
 }
 </script>
 <style>
 .store {
   margin-bottom: 5%;
-  margin-left: 0%;
 }
 
 .title {
@@ -187,5 +214,14 @@ export default {
 }
 .add-btn{
   margin-left: 2%;
+}
+.filter-btn{
+  margin-bottom: 2%;
+}
+.selected{
+  background-color: #FFBF00;
+}
+.selected:hover{
+  background-color: #FFBF00;
 }
 </style>

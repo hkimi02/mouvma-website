@@ -2,22 +2,32 @@
     <div class="col">
     <div class="product_card">
         <div class="imgBx">
-            <img src="../assets/images/banner.jpg" alt="">
+            <img :src="product.img" alt="">
         </div>
         <div class="contextBx">
-            <h3>Wireless Headphone</h3>
-            <h2 class="price">$245<small>.22</small></h2>
+            <h3>{{product.name}}</h3>
+            <h2 class="price">{{'$'+product.price}}</h2>
             <a href="#" class="buy">Buy now</a>
         </div>
     </div>
 </div>
 </template>
 <script>
+
 export default{
     name:'mecrhArticle',
     data(){
         return{
-
+        }
+    },
+    props:
+        [
+        'product'
+        ]
+    ,
+    methods:{
+        test(){
+            console.log(product.imgPath);
         }
     }
 }
@@ -69,7 +79,9 @@ export default{
 }
 
 .imgBx img {
-    max-width: 90%;
+    max-width: 100%;
+    width: 10rem;
+    height: 13rem;
     transition: 0.5s;
 }
 

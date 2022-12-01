@@ -2,7 +2,7 @@
   <div class="row store container-fluid">
     <div class="row">
       <div class="col">
-        <img src="../assets/images/store.svg" alt="">
+        <img src="../assets/images/store.svg" class="store-img" alt="">
       </div>
       <h2 class="col title text-center">welcome to the official mouvma Store all mouvma merch in one place</h2>
     </div>
@@ -13,27 +13,50 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Cart</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Cart <span
+          class="material-symbols-outlined">shopping_cart</span></h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <div class="card row" v-for="purshase in purshases">
+              <div class="card row card-purshase" v-for="purshase in purshases">
                   <img :src="purshase.img" alt="" class="product-image">
                   <div class="card-body">
-                    <h3>{{ purshase.name }}</h3>
-                    <h3>{{ purshase.price }}</h3>
-                    <h3>{{ purshase.buy }}</h3>
+                    <h5>{{ purshase.name }}</h5>
+                    <h5>{{ '$'+purshase.price }}</h5>
+                    <h5 class="text-success">{{ purshase.buy }}</h5>
                     <button class="btn btn-danger" @click="deleteproduct(purshase.id)"><span class="material-symbols-outlined" style="color: black;">delete</span></button>
                     <button class="btn btn-primary add-btn" @click="add_quantity(purshase.id)"><span class="material-symbols-outlined" style="color: black;">add</span></button>
                   </div>
               </div>
+              <hr>
+              <h5>total facture : {{'$'+totalfacture()}}</h5>
             </div>
             <div class="modal-footer">
+              <button class="btn confirm-orders" @click="pass_order()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">confirm order</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
       </div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">thank you!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        thank you your order have been confirmed ! 
+        you can access all your confirmed orders in your profiles !
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn selected" data-bs-dismiss="modal">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <h1 class="title_products text-center">products</h1>
     <div class="row filter-btn">
@@ -130,10 +153,10 @@ export default {
         },
         {
           id: 8,
-          name: 'white t-shirt',
+          name: 'yellow t-shirt',
           price: 38,
           quantity: 10,
-          img: require("../assets/images/white_tshirt.png"),
+          img: require("../assets/images/yellow_tshirt.png"),
           buy: 0,
           type:'t-shirt',
         },
@@ -177,6 +200,7 @@ export default {
       purshases: [],
       filtred_products:[],
       filter:'all',
+      confirm_orders:[],
     }
   },
   methods: {
@@ -241,8 +265,26 @@ export default {
       this.filtred_products=this.products;
     }
     this.filter=type;
+  }, 
+  pass_order(){
+    this.confirm_orders={...this.purshases};
+    console.log(this.confirm_orders);
+    this.purshases=[];
+    localStorage.setItem('purshases',JSON.stringify(this.purshases));
+    localStorage.setItem('confirm_orders',JSON.stringify(this.confirm_orders));
+  },
+  totalfacture(){
+      let total=0;
+      let i=0;
+      for(i=0;i<this.purshases.length;i++){
+        total+=this.purshases[i].price*this.purshases[i].buy;
+      }
+      return total;
   }
   },
+  computed:{
+    
+  }
 }
 </script>
 <style>
@@ -298,4 +340,26 @@ export default {
 .selected:hover{
   background-color: #FFBF00;
 }
+.close-btn{
+  cursor: pointer;
+}
+.card-purshase{
+  width: 20rem;
+  margin-left: 13%;
+  margin-bottom: 2%;
+}
+.confirm-orders{
+  background-color: #FFBF00;
+}
+.confirm-orders:hover{
+  background-color: #FFBF00;
+}
+@media screen and (max-width:768px) {
+    .card-purshase{
+      margin-left: 0%;
+    }
+    .store-img{
+      display: none;
+    }
+  }
 </style>

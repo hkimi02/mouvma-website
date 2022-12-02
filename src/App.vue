@@ -91,7 +91,6 @@ export default {
   --color-light: rgba(0, 0, 0, 0.4);
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
-
 * {
   margin: 0%;
   padding: 0%;

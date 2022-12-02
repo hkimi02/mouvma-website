@@ -16,17 +16,23 @@
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-      </div>
+       </div>
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-        aaa
-      </div>
+        </div>
       <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-        aa
+        <div class="container">
+          <div class="row">
+          <div class="col" v-for="c in confirmed_orders">
+                  <order :c="c" />
+          </div>
+        </div>
+        </div>
+      </div>
       </div>
     </div>
-  </div>
 </template>
 <script>
+import order from '@/components/order.vue'
 export default {
   name: 'ProfileView',
   created() {
@@ -37,7 +43,10 @@ export default {
       active: 'all',
       confirmed_orders: [],
     }
-  }
+  },
+  components:{
+    order
+  },
 }
 </script>
 <style>

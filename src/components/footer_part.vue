@@ -111,12 +111,13 @@
 <script>
 export default {
     name: 'footer_part',
-  }
+}
 </script>
 <style scoped>
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
-    footer{
-        background: #FFBF00;
-        color: #10A19D;
-    }
+
+footer {
+    background: #FFBF00;
+    color: #10A19D;
+}
 </style>

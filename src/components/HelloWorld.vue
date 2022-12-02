@@ -3,7 +3,7 @@
     <img src="../assets/images/banner.jpg" alt="">
   </div>
   <div class="row">
-      <h1 class="title text-center">Activities</h1>
+    <h1 class="title text-center">Activities</h1>
   </div>
   <hr>
   <div class="row office">
@@ -39,127 +39,132 @@
       <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
-    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
-      <a href="" class="me-4 text-reset">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-    </div>
-      </div>
-    </div>
- 
-    <div class="card member-card other-member">
-      <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
-      <div class="card-body">
-        <h5 class="card-title text-center">chairman</h5>
-    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
-      <a href="" class="me-4 text-reset">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-    </div>
+        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
       </div>
     </div>
     <div class="card member-card other-member">
       <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
-    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
-      <a href="" class="me-4 text-reset">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-    </div>
+        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
       </div>
     </div>
     <div class="card member-card other-member">
       <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
-    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
-      <a href="" class="me-4 text-reset">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-    </div>
+        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
       </div>
     </div>
     <div class="card member-card other-member">
       <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
-    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
-      <a href="" class="me-4 text-reset">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-    </div>
+        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
       </div>
     </div>
     <div class="card member-card other-member">
       <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
       <div class="card-body">
         <h5 class="card-title text-center">chairman</h5>
-    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
-      <a href="" class="me-4 text-reset">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="bi bi-linkedin"></i>
-                </a>
+        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
     </div>
+    <div class="card member-card other-member">
+      <img src="../assets/images/banner.jpg" class="card-img-top member-pic">
+      <div class="card-body">
+        <h5 class="card-title text-center">chairman</h5>
+        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <div class="social-media text-muted" style="margin-left: 20%;margin-bottom: 6%;">
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -185,26 +190,32 @@ export default {
   transition: all 300ms ease;
   box-shadow: 0 2rem 3rem #dce1eb;
 }
-.member-card:hover{
+
+.member-card:hover {
   transform: scale(1.2);
 }
-.other-member{
-  margin-top:5%;
+
+.other-member {
+  margin-top: 5%;
   margin-left: 9%;
 }
-.other-member:last-child{
-  margin-left:10%
+
+.other-member:last-child {
+  margin-left: 10%
 }
-.member-pic{
-  margin-top:5%;
+
+.member-pic {
+  margin-top: 5%;
 }
-.title{
-    color: #ffbb55;
-    margin-top: 5%;
+
+.title {
+  color: #ffbb55;
+  margin-top: 5%;
+}
+
+@media screen and (max-width:768px) {
+  .office {
+    margin-left: 5%;
   }
-  @media screen and (max-width:768px) {
-    .office{
-      margin-left: 5%;
-    }
-  }
+}
 </style>

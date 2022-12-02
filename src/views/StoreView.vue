@@ -225,7 +225,6 @@ export default {
       }
     },
     deleteproduct(id){
-      console.log(id);
       this.purshases = this.purshases.filter((x) => x.id != id);
       localStorage.setItem('purshases', JSON.stringify(this.purshases));
     },

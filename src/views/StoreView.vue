@@ -101,6 +101,7 @@ export default {
   created() {
     this.purshases = JSON.parse(localStorage.getItem("purshases"));
     this.filtred_products = this.products;
+    this.confirm_orders= JSON.parse(localStorage.getItem("confirm_orders"))==null ? [] : JSON.parse(localStorage.getItem("confirm_orders"));
   },
   data() {
     return {
@@ -283,8 +284,10 @@ export default {
       this.filter = type;
     },
     pass_order() {
-      this.confirm_orders = { ...this.purshases };
-      console.log(this.confirm_orders);
+      let i=0;
+      for(i=0;i<this.purshases.length;i++){
+          this.confirm_orders.push({ ...this.purshases[i]});
+    }
       this.purshases = [];
       localStorage.setItem('purshases', JSON.stringify(this.purshases));
       localStorage.setItem('confirm_orders', JSON.stringify(this.confirm_orders));

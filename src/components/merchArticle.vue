@@ -74,7 +74,7 @@ export default{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    z-index: 1;
+    z-index: 1; 
 }
 
 .imgBx img {

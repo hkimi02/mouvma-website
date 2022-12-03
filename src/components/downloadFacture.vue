@@ -1,7 +1,8 @@
 <template>
     <div ref="document">
-        <div id="facture">
-            <table class="table" border="1">
+        <div id="facture"  ref="fact" >
+            <h1 class="text-center title">facture</h1>
+            <table class="table" border="2">
                 <tr>
                     <th class="scope">profuct name</th>
                     <th class="scope">profuct price</th>
@@ -37,14 +38,19 @@ export default {
     data(){
         return{
             confirmed_orders:[],
+            download:false,
         }
     },
     methods: {
-        exportToPDF() {
-            html2pdf(document.getElementById("facture"), {
+        async exportToPDF()  {
+            let fact = this.$refs['fact'];
+            fact.classList.add('style_pdf');
+            console.log(fact.classList);
+            await html2pdf(document.getElementById("facture"), {
                 margin: 1,
                 filename: "facture.pdf",
-            });
+            })
+            fact.classList.remove('style_pdf');
         },
         totalFacture(){
             let total=0;
@@ -59,5 +65,14 @@ export default {
 <style scoped>
 .selected{
     background-color: #FFBF00;
+    margin-left: 80%;
+    margin-bottom: 10%;
+}
+.style_pdf{
+    margin-top: 60px;
+    margin-left: 10%;
+}
+.title{
+    margin-left: -10%;
 }
 </style>

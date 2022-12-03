@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link now" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
@@ -58,5 +58,8 @@ export default {
 <style>
 .now {
   background-color: #FFBF00;
+}
+.all{
+  margin-top: 4%;
 }
 </style>

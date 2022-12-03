@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed">
       <div class="container-fluid">
         <a class="navbar-brand brand-text" style="color: #10A19D;" href="#">MOUVMA </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -112,6 +112,10 @@ html{
 .navbar {
   background-color: var(--color-yellow);
   box-shadow: var(--box-shadow);
+  position: fixed!important;
+  width: 100%;
+  top: 0%;
+  z-index: 10;
 }
 
 span {

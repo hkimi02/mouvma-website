@@ -308,6 +308,7 @@ export default {
 <style>
 .store {
   margin-bottom: 5%;
+  margin-top: 3%;
 }
 
 .title {
@@ -378,7 +379,9 @@ export default {
 .confirm-orders:hover {
   background-color: #FFBF00;
 }
-
+.modal{
+  z-index: 10000000000000;
+}
 @media screen and (max-width:768px) {
   .card-purshase {
     margin-left: 0%;

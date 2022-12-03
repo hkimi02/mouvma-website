@@ -39,7 +39,6 @@
                       </div>
                     </div>
                   </div>
-
               <hr>
               <h5>total facture : {{ '$' + totalfacture() }}</h5>
             </div>

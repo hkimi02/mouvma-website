@@ -16,12 +16,16 @@
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-       </div>
+      </div>
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
         </div>
       <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
         <div class="container">
+          <div class="row flex-end now">
+            b
+          </div>
           <div class="row">
+            <downloadFacture></downloadFacture>
           <div class="col" v-for="c in confirmed_orders">
                   <order :c="c" />
           </div>
@@ -33,6 +37,7 @@
 </template>
 <script>
 import order from '@/components/order.vue'
+import downloadFacture from '@/components/downloadFacture.vue';
 export default {
   name: 'ProfileView',
   created() {
@@ -45,7 +50,8 @@ export default {
     }
   },
   components:{
-    order
+    order,
+    downloadFacture,
   },
 }
 </script>

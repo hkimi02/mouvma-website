@@ -10,6 +10,7 @@
         "bootstrap": "^5.2.3",
         "bootstrap-icons": "^1.10.2",
         "core-js": "^3.8.3",
+        "html2pdf.js": "^0.10.1",
         "vue": "^3.2.13",
         "vue-router": "^4.0.3",
         "vuex": "^4.0.0"

@@ -1,6 +1,6 @@
 <template>
   <div class="row store container-fluid">
-    <div class="row">
+    <div class="row presentation">
       <div class="col">
         <img src="../assets/images/store.svg" class="store-img" alt="">
       </div>
@@ -384,11 +384,11 @@ export default {
 }
 @media screen and (max-width:768px) {
   .card-purshase {
-    margin-left: 0%;
+    margin-left: 20%;
   }
-
-  .store-img {
-    display: none;
-  }
+    .presentation{
+        display: block;
+        margin-left: 3%;
+    }
 }
 </style>

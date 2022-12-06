@@ -180,5 +180,4 @@ button {
 .grow-out-leave-active{
   transition: 0.5s ease-out;
 }
-
 </style>

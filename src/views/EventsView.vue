@@ -72,4 +72,12 @@ export default {
     font: bold;
     font-size: 4rem;
 }
+@media screen and (max-width:768px) {
+    .presentation{
+        display: block;
+    }
+    .card-event {
+    margin-left: 0%;
+}
+}
 </style>

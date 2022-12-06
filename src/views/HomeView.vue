@@ -25,4 +25,9 @@ export default {
     font-size: 4rem;
     color: #ffbb55;
   }
+  @media screen and (max-width:768px) {
+    .title{
+      margin-top: 30%;
+    }
+  }
 </style>

@@ -214,8 +214,20 @@ export default {
 }
 
 @media screen and (max-width:768px) {
+  .member-card {
+  margin-left: -2%;
+  box-shadow: none;
+}
+.office img.col,.office h1{
+  margin-left: -6%;
+}
+.other-member:last-child {
+  margin-left: 0%
+}
+}
+@media screen and (max-width:1200px) {
   .office {
-    margin-left: 5%;
+    margin-left: 15%;
   }
 }
 </style>

@@ -20,8 +20,12 @@
 <script>
 export default{
     name:'eventCard',
+    created(){
+    },
     props:{
         event:Object,
+    },
+    methods:{
     }
 }
 </script>

@@ -1,9 +1,18 @@
 <template>
     <div class="container-fluid main">
+        <div class="row presentation">
+            <div class="col">
+                <img src="../assets/images/eventspage.svg" class="store-img" alt="">
+            </div>
+            <h2 class="col title text-center">here you can find all of mouvma events you can discover them and add them to your list</h2>
+        </div>
+        <div class="row">
+            <h1 class="text-center title-event">Events</h1>
+        </div>
         <div class="row">
             <div v-for="event in events" class="col card-event">
-            <eventCard :event="event"></eventCard>
-        </div>
+                <eventCard :event="event"></eventCard>
+            </div>
         </div>
     </div>
 </template>
@@ -113,13 +122,25 @@ export default {
 }
 </script>
 <style>
-.main{
-    width: 100%!important;
+.main {
+    width: 100% !important;
     margin-bottom: 5%;
     margin-top: 10%;
 }
-.card-event{
+
+.card-event {
     margin-left: 6%;
     margin-bottom: 5%;
+}
+.title {
+  color: #FFBF00;
+  font: bold;
+  font-size: 4rem;
+  margin-top: 5%;
+}
+.title-event{
+    color: var(--color-yellow);
+    font: bold;
+  font-size: 4rem;
 }
 </style>

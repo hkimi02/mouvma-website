@@ -42,7 +42,11 @@
     </nav>
   </div>
   <div>
-    <router-view />
+    <router-view v-slot="{ Component }">
+  <transition name="grow-out" mode="out-in">
+    <component :is="Component" />
+  </transition>
+</router-view>
   </div>
   <footer_part></footer_part>
 </template>
@@ -83,7 +87,13 @@ export default {
   --padding-1: 1.2rem;
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
-
+/* .fade-enter,.fade-leave-to{
+  opacity: 0;
+  transform: translateX(2em);
+}
+.fade-enter-active,.fade-leave-active{
+  transition: all .3s ease;
+} */
 .dark-theme-variables {
   --color-backgound: #181a12;
   --color-white: #202528;
@@ -126,4 +136,49 @@ span {
 button {
   box-shadow: var(--box-shadow);
 }
+.fade-enter-form,
+.fade-leave-to{
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active{
+  transition: opacity 0.3s ease-out;
+}
+.slide-enter-form,
+.slide-leave-to{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.slide-enter-active,
+.slide-leave-active{
+  transition: 0.3s ease-out;
+}
+.slide-down-enter-form,
+.slide-down-leave-to{
+  opacity: 0;
+  transform: translateY(300px);
+}
+.slide-down-enter-active,
+.slide-down-leave-active{
+  transition: 0.3s ease-out;
+}
+.grow-in-enter-form,
+.grow-in-leave-to{
+  opacity: 0;
+  transform: scale(0.3);
+}
+.grow-in-enter-active,
+.grow-in-leave-active{
+  transition: 0.3s ease-out;
+}
+.grow-out-enter-form,
+.grow-out-leave-to{
+  opacity: 0;
+  transform: scale(1.2);
+}
+.grow-out-enter-active,
+.grow-out-leave-active{
+  transition: 0.5s ease-out;
+}
+
 </style>

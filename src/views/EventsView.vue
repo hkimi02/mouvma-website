@@ -32,8 +32,10 @@ export default {
             savedEvents: [],
         }
     },
-    created() {
+    mounted(){
         this.savedEvents = JSON.parse(localStorage.getItem('savedEvents')) == null ? localStorage.setItem("savedEvents", JSON.stringify(this.savedEvents)) : JSON.parse(localStorage.getItem('savedEvents'));
+    },
+    created() {
         EventService.getEvents().then(response => {
             console.log(response.data[0].poster.split("/")[4].substr(0, 16));
             this.events = response.data;

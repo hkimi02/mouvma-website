@@ -16,9 +16,9 @@
                         <i class="bi bi-info-circle icon-card"></i>
                     </button>
                     </router-link>
-                    <a href="" class="me-4 text-muted icon-card">
+                    <p class="me-4 text-muted icon-card">
                         {{event.date}}
-                    </a>
+                    </p>
                 </div>
             </div>
         </div>

@@ -1,15 +1,15 @@
 <template>
     <div class="container" v-if="(event!=null)">
-        <EventdescribVue :event="event"></EventdescribVue>
+        <Eventdescrib :event="event"></Eventdescrib>
     </div>
 </template>
 <script>
-import EventdescribVue from './Eventdescrib.vue';
+import Eventdescrib from '@/components/Eventdescrib.vue';
 import EventService from '@/services/EventService.js';
 export default{
     props:["id"],
     components:{
-        EventdescribVue,
+        Eventdescrib,
     },
     data(){
         return{

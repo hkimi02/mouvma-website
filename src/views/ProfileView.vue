@@ -16,6 +16,9 @@
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="card element-card">
+          
+        </div>
       </div>
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
         </div>
@@ -61,5 +64,10 @@ export default {
 }
 .all{
   margin-top: 4%;
+}
+.element-card{
+  height: 30%;
+  width: 30%;
+  margin-left: 10%;
 }
 </style>

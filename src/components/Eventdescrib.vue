@@ -3,7 +3,7 @@
     <br>
     <div class="row presentation">
         <div class="col">
-            <img :src="event.img1" class="store-img img-thumbnail rounded" alt="" style="width: 30rem;height: 40rem;">
+            <img :src="event.poster" class="store-img img-thumbnail rounded" alt="" style="width: 30rem;height: 40rem;">
         </div>
         <h2 class="col title text-center">{{ event.describ1 }}</h2>
     </div>

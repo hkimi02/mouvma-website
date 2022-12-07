@@ -36,7 +36,9 @@
               </div>
             </li>
           </ul>
-          <button class="btn login_btn" style="background-color: #10A19D;">login</button>
+          <router-link to="/contactUs">
+          <button class="btn login_btn" style="background-color: #10A19D;">contact us </button>
+        </router-link>
         </div>
       </div>
     </nav>

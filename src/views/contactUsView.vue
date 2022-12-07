@@ -3,7 +3,7 @@
         <h1 class="title text-center">give us your opinions to help us develop our services</h1>
         <div class="row presentation">
             <div class="col">
-                <contactForm @add-comment="add_comment"></contactForm>
+                <contactForm @add-comment="add_comment" :id="(comments.length==0 ? 0 : comments.length)"></contactForm>
             </div>
             <div class="col">
                 <img src="../assets/images/contactUS.svg" alt="">

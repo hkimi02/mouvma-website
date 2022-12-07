@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             <div v-for="event in events" class="col card-event">
-                <eventCard :event="event"></eventCard>
+                <eventCard :event="event" @add-event="addEvent(event)" :savedEvents="savedEvents" @delete-event="delete_event(event.id)"></eventCard>
             </div>
         </div>
     </div>
@@ -45,6 +45,24 @@ export default {
                 this.events[i].img4 = require("../assets/images/event" + (i + 1) + "/" + response.data[i].img4.split("/")[4]);
             }
         })
+    },
+    methods:{
+        addEvent(event){
+            let item={
+                event_id:event.id,               
+                event_name:event.event_name,
+                poster:event.poster,
+                date:event.date,
+            }
+            this.savedEvents.push(item);
+            alert('event added to your list you can check it in your profile');
+            localStorage.setItem("savedEvents",JSON.stringify(this.savedEvents));
+        },
+        delete_event(id){
+            this.savedEvents = this.savedEvents.filter((x) => x.event_id != id);
+            alert('event removed from your list');
+            localStorage.setItem("savedEvents",JSON.stringify(this.savedEvents));
+        }
     }
 }
 </script>

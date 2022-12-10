@@ -8,7 +8,6 @@
                 <span>Get connected with us on social networks:</span>
             </div>
             <!-- Left -->
-
             <!-- Right -->
             <div>
                 <a href="" class="me-4 text-reset">
@@ -43,59 +42,39 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Company name
+                            <i class="fas fa-gem me-3"></i>MOUVMA
                         </h6>
                         <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
+                            university club sport,events,merch in one place
                         </p>
                     </div>
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Products
+                            sections
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Angular</a>
+                            <router-link to="/Events" class="text-reset">events</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">React</a>
+                            <router-link to="/Store" class="text-reset">store</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Vue</a>
+                            <router-link to="/Profile" class="text-reset">profile</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Laravel</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Pricing</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Settings</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Orders</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Help</a>
+                            <router-link to="/contactUs" class="text-reset">contact us</router-link>
                         </p>
                     </div>
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="bi bi-house-door-fill"></i> New York, NY 10012, US</p>
+                        <p><i class="bi bi-house-door-fill"></i> tunis tunisia</p>
                         <p>
                             <i class="bi bi-envelope-fill"></i>
-                            info@example.com
+                            mouvma@gmail.com
                         </p>
-                        <p><i class="bi bi-telephone-fill"></i> + 01 234 567 88</p>
-                        <p><i class="bi bi-printer-fill"></i> + 01 234 567 89</p>
+                        <p><i class="bi bi-telephone-fill"></i> + 42 463 928</p>
                     </div>
                     <!-- Grid column -->
                 </div>
@@ -103,8 +82,8 @@
             </div>
         </section>
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="https://www.facebook.com/mohamedamin.hkimi.5/">Hkimi Mohamed Amin</a>
         </div>
     </footer>
 </template>

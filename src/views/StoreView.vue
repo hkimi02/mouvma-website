@@ -8,7 +8,7 @@
     </div>
     <div class="row flex-end" width="100px">
       <button class="btn btn-cart" data-bs-toggle="modal" data-bs-target="#exampleModal"><span
-          class="material-symbols-outlined">shopping_cart</span>({{ purshases.length }})</button>
+          class="material-symbols-outlined">shopping_cart</span>({{ total_cart }})</button>
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -40,7 +40,7 @@
                     </div>
                   </div>
               <hr>
-              <h5>total facture : {{ '$' + totalfacture() }}</h5>
+              <h5>total facture : {{ '$' + totalfacture }}</h5>
             </div>
             <div class="modal-footer">
               <button class="btn confirm-orders" @click="pass_order()" data-bs-toggle="modal"
@@ -291,7 +291,12 @@ export default {
       localStorage.setItem('purshases', JSON.stringify(this.purshases));
       localStorage.setItem('confirm_orders', JSON.stringify(this.confirm_orders));
     },
-    totalfacture() {
+  },
+  computed: {
+      total_cart(){
+        return this.purshases.length;
+      },
+      totalfacture() {
       let total = 0;
       let i = 0;
       for (i = 0; i < this.purshases.length; i++) {
@@ -299,9 +304,6 @@ export default {
       }
       return total;
     }
-  },
-  computed: {
-
   }
 }
 </script>

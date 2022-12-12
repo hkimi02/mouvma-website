@@ -59,7 +59,7 @@ export default {
   name: 'App',
   components: {
     footer_part
-  }
+  },
 }
 </script>
 <style>

@@ -2,7 +2,8 @@
   <div>
     <nav class="navbar navbar-expand-lg fixed">
       <div class="container-fluid">
-        <a class="navbar-brand brand-text" style="color: #10A19D;" href="#">MOUVMA </a>
+        <router-link class="navbar-brand brand-text" style="color: #10A19D;" to="/"><img src="./assets/images/white-no-bg.png"
+            alt="" height="50" width="60"> </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -37,18 +38,18 @@
             </li>
           </ul>
           <router-link to="/contactUs">
-          <button class="btn login_btn" style="background-color: #10A19D;">contact us </button>
-        </router-link>
+            <button class="btn login_btn" style="background-color: #10A19D;">contact us </button>
+          </router-link>
         </div>
       </div>
     </nav>
   </div>
-  <div>
+  <div class="main">
     <router-view v-slot="{ Component }">
-  <transition name="grow-out" mode="out-in">
-    <component :is="Component" />
-  </transition>
-</router-view>
+      <transition name="grow-out" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
   <footer_part></footer_part>
 </template>
@@ -89,6 +90,7 @@ export default {
   --padding-1: 1.2rem;
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
+
 /* .fade-enter,.fade-leave-to{
   opacity: 0;
   transform: translateX(2em);
@@ -103,6 +105,7 @@ export default {
   --color-light: rgba(0, 0, 0, 0.4);
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
+
 * {
   margin: 0%;
   padding: 0%;
@@ -114,9 +117,11 @@ export default {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 .router-link {
   text-decoration: none;
 }
@@ -124,7 +129,7 @@ html{
 .navbar {
   background-color: var(--color-yellow);
   box-shadow: var(--box-shadow);
-  position: fixed!important;
+  position: fixed !important;
   width: 100%;
   top: 0%;
   z-index: 10;
@@ -138,48 +143,62 @@ span {
 button {
   box-shadow: var(--box-shadow);
 }
+
 .fade-enter-form,
-.fade-leave-to{
+.fade-leave-to {
   opacity: 0;
 }
+
 .fade-enter-active,
-.fade-leave-active{
+.fade-leave-active {
   transition: opacity 0.3s ease-out;
 }
+
 .slide-enter-form,
-.slide-leave-to{
+.slide-leave-to {
   opacity: 0;
   transform: translateX(-100%);
 }
+
 .slide-enter-active,
-.slide-leave-active{
+.slide-leave-active {
   transition: 0.3s ease-out;
 }
+
 .slide-down-enter-form,
-.slide-down-leave-to{
+.slide-down-leave-to {
   opacity: 0;
   transform: translateY(300px);
 }
+
 .slide-down-enter-active,
-.slide-down-leave-active{
+.slide-down-leave-active {
   transition: 0.3s ease-out;
 }
+
 .grow-in-enter-form,
-.grow-in-leave-to{
+.grow-in-leave-to {
   opacity: 0;
   transform: scale(0.3);
 }
+
 .grow-in-enter-active,
-.grow-in-leave-active{
+.grow-in-leave-active {
   transition: 0.3s ease-out;
 }
+
 .grow-out-enter-form,
-.grow-out-leave-to{
+.grow-out-leave-to {
   opacity: 0;
   transform: scale(1.2);
 }
+
 .grow-out-enter-active,
-.grow-out-leave-active{
+.grow-out-leave-active {
   transition: 0.5s ease-out;
+}
+
+.main {
+  margin-top: 5%!important;
 }
 </style>

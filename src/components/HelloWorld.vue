@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <img src="../assets/images/banner.jpg" alt="">
+    <img src="../assets/images/logo_files/svg/logo-no-background.svg" alt="">
   </div>
   <div class="row">
     <h1 class="title text-center">Activities</h1>

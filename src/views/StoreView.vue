@@ -7,8 +7,6 @@
       <h2 class="col title text-center">welcome to the official mouvma Store all mouvma merch in one place</h2>
     </div>
     <div class="row flex-end" width="100px">
-      <button class="btn btn-cart" data-bs-toggle="modal" data-bs-target="#exampleModal"><span
-          class="material-symbols-outlined">shopping_cart</span>({{ total_cart }})</button>
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -50,7 +48,6 @@
           </div>
         </div>
       </div>
-      <!-- Modal -->
       <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -72,6 +69,8 @@
       </div>
     </div>
     <h1 class="title_products text-center">products</h1>
+    <button class="btn btn-cart" data-bs-toggle="modal" data-bs-target="#exampleModal"><span
+          class="material-symbols-outlined">shopping_cart</span>({{ total_cart }})</button>
     <div class="row filter-btn">
       <button :class="[filter == 'all' ? 'selected' : '']" class="btn col" @click="showArticle('all')">ALL</button>
       <button :class="[filter == 'hoodie' ? 'selected' : '']" class="btn col"
@@ -334,10 +333,19 @@ export default {
 }
 
 .btn-cart {
-  background-color: #fff;
+  background-color: #FFBF00;
   box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
   border: 0;
   margin-left: 2%;
+  width: 150px!important;
+  margin-bottom: 2%;
+  position: fixed;
+  top: 90%;
+  z-index: 10000000000000;
+  left: 0%;
+  right: 100%;
+  text-align: center;
+  margin-left: 90%;
 }
 
 .product-image {
@@ -391,6 +399,13 @@ export default {
     .presentation{
         display: block;
         margin-left: 3%;
+    }
+    .btn-cart{
+      margin-left: 80%;
+      width: 100px!important;
+    }
+    .modal .modal-body{
+      justify-content: center!important;
     }
 }
 </style>

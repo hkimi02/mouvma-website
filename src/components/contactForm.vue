@@ -1,6 +1,9 @@
 <template>
     <div class="card">
         <form @submit.prevent="add_comment()">
+            <div class="alert alert-danger" v-if="erreur==false">
+                <p>{{msgErreur}}</p>
+            </div>
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="tom wolf" v-model="name">
@@ -39,13 +42,27 @@ export default {
             email: '',
             message: '',
             rating: null,
+            erreur: true,
+            msgErreur: 'please fill all the fields',
         }
     },
     props: {
         id: Number,
     },
     methods: {
+        vaildForm() {
+            if (this.name == '' || this.email == '' || this.message == '' || this.rating == null) {
+                return false;
+            } else {
+                return true;
+            }
+        },
         add_comment() {
+            if(!this.vaildForm()){
+                this.erreur=false;
+                return this.erreur;
+            }
+        else{
             let new_comment = {
                 id:this.id,
                 name: this.name,
@@ -58,7 +75,8 @@ export default {
             this.email = '';
             this.message = '';
             this.rating = '';
-        }
+            return true;
+        }}
     }
 }
 </script>

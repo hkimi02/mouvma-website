@@ -50,6 +50,14 @@ export default {
         id: Number,
     },
     methods: {
+        //function to check if the name is valid or not
+        validName() {
+            if (this.name.length < 3) {
+                return false;
+            } else {
+                return true;
+            }
+        },
         vaildForm() {
             if (this.name == '' || this.email == '' || this.message == '' || this.rating == null) {
                 return false;

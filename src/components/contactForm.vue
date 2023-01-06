@@ -83,6 +83,7 @@ export default {
             this.email = '';
             this.message = '';
             this.rating = '';
+            this.erreur=true;
             return true;
         }}
     }

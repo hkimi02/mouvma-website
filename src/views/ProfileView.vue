@@ -35,6 +35,7 @@
         </div>
       </div>
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div v-if="savedEvents.length==0">you didnt save any event yet check the events page and check recent events <router-link to="./EventsView.vue">events page</router-link></div>
         <div class="row invitations">
         <div class="col event-card" v-for="event in savedEvents">
           <savedEvent :event="event" @delete-saved="delete_saved(event.event_id)"></savedEvent>
@@ -42,10 +43,10 @@
       </div>
       </div>
       <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+        <div v-if="confirmed_orders.length==0">you dont have any confirmed orders yet <router-link to="./StoreView.vue">store page</router-link></div>
         <div class="container">
           <downloadFacture></downloadFacture>
           <div class="row">
-            
             <div class="col" v-for="c in confirmed_orders">
               <order :c="c" />
             </div>
@@ -53,6 +54,7 @@
         </div>
       </div>
       <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+        <div v-if="comments.length==0">you didnt added any comments yet ! <router-link to="./contactUsView.vue">contact us !</router-link></div>
         <div class="row comments">
           <div class="col comment-card" v-for="comment in comments">
             <comment :comment="comment" @delete-comment="delete_comment(comment.id)"></comment>
